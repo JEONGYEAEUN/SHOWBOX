@@ -1,0 +1,216 @@
+/* reset------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+address,
+em,
+i {
+  font-style: normal;
+}
+
+strong,
+b {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+o1 {
+  list-style: none;
+}
+
+/* common------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-size: 14px;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: #000;
+  z-index: 1000;
+  height: 80px;
+  transform: all 0.5s ease 0s;
+  font-family: 'Pretendard-Regular'
+    /* overflow: hidden; */
+
+}
+
+header:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.4)
+}
+
+.logoarea {
+  border: 1px solid red;
+  width: 180px;
+  height: 45px;
+  position: absolute;
+
+
+}
+
+.gnb>ul {
+  border: 1px solid orange;
+  background: #000;
+  width: 790px;
+  margin: 0 auto;
+  display: flex;
+  /* height: 70px; */
+  align-items: center;
+  text-align: center;
+}
+
+.gnb>ul {
+  position: relative;
+  z-index: 5;
+}
+
+.gnb>ul>li {
+  flex: 1;
+  border: 1px solid red;
+  color: #fff;
+  /* position: relative; */
+  height: 80px;
+}
+
+.gnb>ul ul {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  border: 1px solid lime;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  padding: 30px 0;
+  display: none;
+}
+
+.gnb>ul>li:hover ul {
+  display: flex;
+}
+
+.gnb>ul>li>a {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+nav.sns>ul {
+  border: 1px solid red;
+  display: flex;
+  width: 80px;
+  position: absolute;
+  right: 160px;
+  top: 50%;
+}
+
+nav.sns>ul>li {
+  /* flex: 1; */
+  border: 1px solid blue;
+  justify-content: center;
+  padding: 0 7px;
+  color: #fff;
+}
+
+nav.langList {
+  border: 1px solid red;
+
+}
+
+/* main----------------------------- */
+
+main {
+  position: relative;
+}
+
+.videoBanner {
+  height: 100vh;
+  position: relative;
+}
+
+.videoBanner:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.videoBanner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flotingTxt {
+  /* border: 1px solid lime; */
+  font-family: 'Mukta', sans-serif;
+  color: #fff;
+  position: absolute;
+  left: 19%;
+  top: 31%;
+  z-index: 10;
+  text-align: center;
+}
+
+.floating_1 {
+  font-size: 2.8rem;
+  /* border: 1px solid red; */
+  text-align: left;
+  padding-bottom: 8px;
+}
+
+.floating_1center {
+  font-size: 2rem;
+}
+
+.logoTypo {
+  width: 810px;
+}
+
+.floting_2 {
+  text-align: left;
+  font-size: 1.7rem;
+  font-weight: 300;
+  padding-top: 7px;
+  letter-spacing: 1px;
+}
+
+/* 
+.catchphrase {
+  background: #1E1B1B;
+  height: 850px;
+} */
