@@ -46,10 +46,74 @@ img {
 /* common------------------------------------------------------------------------- */
 
 @font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-weight: 400;
+  font-family: 'Pretendard Variable';
+  font-weight: 45 920;
   font-style: normal;
+  font-display: swap;
+  src: local('Pretendard Variable'), url('./images/PretendardVariable.woff2') format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./images/Pretendard-Thin.woff') format('woff');
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./images/Pretendard-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./images/Pretendard-Light.woff') format('woff');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./images/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./images/Pretendard-Medium.woff') format('woff');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./images/Pretendard-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./images/Pretendard-Bold.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./images/Pretendard-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('./images/Pretendard-Black.woff') format('woff');
+  font-weight: 900;
+  font-display: swap;
 }
 
 html {
@@ -61,14 +125,14 @@ header {
   left: 0;
   top: 0;
   width: 100%;
-  background: #000;
+  /* background: #000; */
   z-index: 1000;
   height: 80px;
   transform: all 0.5s ease 0s;
   font-family: 'Pretendard-Regular'
 }
 
-header :hover:after {
+header:hover:after {
   content: "";
   position: absolute;
   top: 80px;
@@ -79,17 +143,16 @@ header :hover:after {
 }
 
 .logoarea {
-  width: 180px;
-  height: 45px;
+  width: 150px;
+  height: 40px;
   position: absolute;
   top: 50%;
-  left: 10PX;
+  left: 25PX;
   transform: translateY(-50%);
 }
 
 .gnb>ul {
   border: 1px solid LIME;
-  background: #000;
   width: 790px;
   margin: 0 auto;
   display: flex;
@@ -106,6 +169,8 @@ header :hover:after {
   align-items: center;
   justify-content: center;
   color: #fff;
+  font-weight: 300;
+  font-size: 0.5rem;
   height: 100%;
 }
 
@@ -135,6 +200,8 @@ header :hover:after {
 .gnb>ul>li li {
   border: 1px solid red;
   margin: 0 45px;
+  font-size: 1.1rem;
+  font-weight: 100;
 }
 
 .gnb>ul>li:hover div {
@@ -183,31 +250,78 @@ header :hover:after {
 
 
 nav.sns>ul {
-  border: 1px solid red;
   display: flex;
   width: 80px;
   position: absolute;
-  right: 160px;
+  right: 90px;
   top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 nav.sns>ul>li {
   /* flex: 1; */
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   justify-content: center;
-  padding: 0 7px;
+  padding-right: 18px;
   color: #fff;
+}
+
+nav.sns>ul>li:last-of-type {
+  padding-right: 0;
 }
 
 nav.langList {
   border: 1px solid red;
+}
+
+.langList>button {
+  background: none;
+  border: none;
+  display: flex;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.langList>button>img {
+  width: 15px;
+  height: 15px;
+  padding-right: 5px;
+  object-fit: contain;
+}
+
+.langList>ul {
+  width: 95px;
+  height: 60px;
+  background: #1d1d1d;
+  position: absolute;
+  top: calc(100% + -15px);
+  right: 30px;
+  padding: 7px 0 7px 10px;
+  align-items: center;
+}
+
+
+.langList li {
+
+  width: 100%;
+  height: 50%;
+  color: #fff;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
 
 }
+
+
 
 /* main----------------------------- */
 
 main {
   position: relative;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .videoBanner {
@@ -232,12 +346,12 @@ main {
 }
 
 .flotingTxt {
-  /* border: 1px solid lime; */
+  border: 1px solid lime;
   font-family: 'Mukta', sans-serif;
   color: #fff;
   position: absolute;
   left: 19%;
-  top: 31%;
+  top: 570px;
   z-index: 10;
   text-align: center;
 }
@@ -265,8 +379,133 @@ main {
   letter-spacing: 1px;
 }
 
-/* 
+
+
+
+
+
 .catchphrase {
   background: #1E1B1B;
-  height: 850px;
-} */
+  height: 100vh
+}
+
+.up>* {
+  display: flex;
+  border: 1px solid red;
+  justify-content: center;
+
+}
+
+.up>h2 {
+  font-size: 6rem;
+  padding-top: 140px;
+  padding-bottom: 45px;
+  color: #D6681C;
+  font-weight: 700;
+}
+
+.up>p {
+  color: #fff;
+  font-size: 1.7rem;
+  padding-bottom: 150px;
+}
+
+.catchphrase img {
+  width: 712px;
+  height: 13px;
+  border: 1px solid red;
+  margin: 0 auto;
+}
+
+.down>h4 {
+  font-size: 3.5rem;
+  border: 1px solid red;
+  color: #D6681C;
+  font-weight: 700;
+  margin-top: 85px;
+  margin-bottom: 60px;
+}
+
+.down span {
+  color: #D6681C;
+}
+
+.down>* {
+  display: flex;
+  border: 1px solid red;
+  justify-content: center;
+}
+
+.down>p {
+  color: #fff;
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 100px;
+}
+
+/* ---------------------------------------------------------- */
+
+.ad {
+  position: relative;
+  width: 100%;
+  height: 480px;
+}
+
+.ad>img {
+  width: 100%;
+  height: 480px;
+}
+
+.floatingAd {
+  border: 1px solid red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.floatingAd>p {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.floatingAd>a {
+  border: 1px solid #fff;
+  font-size: 1.3rem;
+  padding: 6px 10px;
+  font-weight: 300;
+}
+
+/* -------------------------------------------------------------------- */
+
+.movieslider {
+  background: #0F1C3F;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Pretendard-Regular';
+  position: relative;
+  color: #fff;
+}
+
+.movieslider>h1 {
+  color: #fff;
+  font-size: 3.6rem;
+  text-align: center;
+  padding-top: 87px;
+}
+
+.movieslider>.top5left {
+  border: 1px solid red;
+}
+
+.movieslider>.top5left>h4 {
+  border: 1px solid red;
+  font-size: 2.8rem;
+  font-weight: 200;
+}

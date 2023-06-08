@@ -23,6 +23,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
     rel="stylesheet">
+
+  <!-- ---------------------------- -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css" />
 </head>
 
 <body>
@@ -80,35 +84,42 @@
       </nav>
       <nav class="langList">
         <button>
-          <span></span>KO<span></span>
+          <img src="./img/SVG/lang.svg" alt="언어탭 아이콘">
+          <span>KO</span>
         </button>
         <ul>
-          <li>KOREAN</li>
-          <li>ENGLISH</li>
+          <li><a href="#">KOREAN</a></li>
+          <li><a href="#">ENGLISH</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <div class="videoBanner">
-        <video autoplay muted loop>
-          <source src="./vid/mainbanner.mp4" type="video/mp4">
-          <source src="./vid/mainbanner.webm" type="video/webm">
-        </video>
+      <div class="page1">
+        <div class="videoBanner">
+          <video autoplay muted loop>
+            <source src="./vid/mainbanner.mp4" type="video/mp4">
+            <source src="./vid/mainbanner.webm" type="video/webm">
+          </video>
+        </div>
+        <div class="flotingTxt">
+          <p class="floating_1">FUN <span class="floating_1center">FOR</span> TOMORROW</p>
+          <h2 class="logoTypo"><img src="./img/SVG/showboxtypo.svg" alt="메인배너용 쇼박스 타이포">
+          </h2>
+          <p class="floting_2">A
+            MEDIAPLEX COMPANY</p>
+        </div>
+        <span class="scroll"></span>
       </div>
-      <div class="flotingTxt">
-        <p class="floating_1">FUN <span class="floating_1center">FOR</span> TOMORROW</p>
-        <h2 class="logoTypo"><img src="./img/SVG/showboxtypo.svg" alt="메인배너용 쇼박스 타이포">
-        </h2>
-        <p class="floting_2">A
-          MEDIAPLEX COMPANY</p>
-      </div>
+
 
       <div class="catchphrase">
         <section class="up">
           <h2>NO.1 K-Content Leader</h2>
           <p>풍부한 경험과 독보적인 기획력으로 K-콘텐츠 산업을 선도하는 NO.1 그룹</p>
+          <img src="./img/SVG/catchline.svg" alt="구분선">
         </section>
-        <section class="dowm">
+
+        <section class="down">
           <h4>Total Management</h4>
           <p>주식회사 쇼박스는<br>
             과감한 기획과 창조적 시도를 가능케하는 안정적 파트너십으로<br>
@@ -123,69 +134,93 @@
           <p>NOW SHOWING</p>
           <a href="#">자세히 보기</a>
         </div>
-
-        <div class="movieslider">
-
-        </div>
-
-
-        <div class="showboxNow">
-          <section class="nowTitle">
-            <h3>SHOWBOX NOW</h3>
-            <P>쇼박스의 다양한 소식들을 한눈에 확인해 보세요</P>
-          </section>
-          <section class="nowContents">
-            <ul>
-              <li>
-                <div class="showboxN_left">
-                  <h5>S-ANNOUNCE</h5>
-                  <P>공지사항</P>
-                </div>
-                <span></span>
-              </li>
-              <li>
-                <div class="showboxN_center">
-                  <h5>S-PRESS</h5>
-                  <P>언론소식</P>
-                </div>
-                <span></span>
-              </li>
-              <li>
-                <div class="showboxN_right">
-                  <h5>S-RECRUIT</h5>
-                  <P>채용공고</P>
-                </div>
-                <span></span>
-              </li>
-            </ul>
-          </section>
-        </div>
-
-
-
       </div>
-    </main>
-    <footer>
-      <figure class="fLogo">
-        <img src="./img/SVG/showboxFlogo.svg" alt="쇼박스 푸터 로고">
-      </figure>
-      <div class="corIn">
-        <section class="address">
-          <p>서울특별시 강남구 도산대로 310(논현동) 916빌딩 7~9층 (06054)</p>
-          <p>+82 02-3218-5500</p>
-          <a href="#">사이트맵</a>
+
+      <div class="movieslider">
+        <h1>SHOWBOX TOP 5</h1>
+        <section class="top5left">
+          <h4>태극기 휘날리며</h4>
+          <p>드라마 | 강제규 | 2004.02.05</p>
+          <p>가족의 생계를 책임지기 위해 열심히 살아가는 ‘진태’는<br>
+            약혼녀 ‘영신’과의 결혼과, 세상에서 가장 소중하게 생각<br>
+            하는 동생 ‘진석’의 대학진학을 위해 어려운 상황에서도<br>
+            씩씩하게 생활을 해나간다. 1950년 6월의 어느 날,<br>
+            한반도에 전쟁이 일어났다는 호회가 배포되고, 두 형제는<br>
+            평온한 일상에서 갑작스레 전쟁터로 내몰린다. 훈련받을<br>
+            시간조차 없이 국군 최후의 보루인 낙동강 방어선으로<br>
+            실전 투입된 ‘진태’와 ‘진석’. 끝내 생각지도 못한 운명의<br>
+            덫이 두 형제를 기다리고 있는데…</p>
+          <span>01</span>
         </section>
-        <section class="copy">
-          <p>COPYRIGHTⓒ SHOWBOX. ALL RIGHTS RESERVED</p>
+        <section class="top5right">
+          <ul>
+            <li><img src="./img/1000/top5_1.jpg" alt="태극기 휘날리며 포스터"></li>
+            <li><img src="./img/1000/top5_2.jpg" alt="괴물 포스터"></li>
+            <li><img src="./img/1000/top5_3.jpg" alt="도둑들 포스터"></li>
+            <li><img src="./img/1000/top5_4.jpg" alt="암살 포스터"></li>
+            <li><img src="./img/1000/top5_5.jpg" alt="택시운전사 포스터"></li>
+          </ul>
         </section>
       </div>
-      <div class="familysite">
-        <button>Family site</button>
-        <ul>
-          <li>ORION</li>
-        </ul>
+
+
+      <div class="showboxNow">
+        <section class="nowTitle">
+          <h3>SHOWBOX NOW</h3>
+          <P>쇼박스의 다양한 소식들을 한눈에 확인해 보세요</P>
+        </section>
+        <section class="nowContents">
+          <ul>
+            <li>
+              <div class="showboxN_left">
+                <h5>S-ANNOUNCE</h5>
+                <P>공지사항</P>
+              </div>
+              <span></span>
+            </li>
+            <li>
+              <div class="showboxN_center">
+                <h5>S-PRESS</h5>
+                <P>언론소식</P>
+              </div>
+              <span></span>
+            </li>
+            <li>
+              <div class="showboxN_right">
+                <h5>S-RECRUIT</h5>
+                <P>채용공고</P>
+              </div>
+              <span></span>
+            </li>
+          </ul>
+        </section>
       </div>
-    </footer>
+
+
+
+  </div>
+  </main>
+  <footer>
+    <figure class="fLogo">
+      <img src="./img/SVG/showboxFlogo.svg" alt="쇼박스 푸터 로고">
+    </figure>
+    <div class="corIn">
+      <section class="address">
+        <p>서울특별시 강남구 도산대로 310(논현동) 916빌딩 7~9층 (06054)</p>
+        <p>+82 02-3218-5500</p>
+        <a href="#">사이트맵</a>
+      </section>
+      <section class="copy">
+        <p>COPYRIGHTⓒ SHOWBOX. ALL RIGHTS RESERVED</p>
+      </section>
+    </div>
+    <div class="familysite">
+      <button>Family site</button>
+      <ul>
+        <li>ORION</li>
+      </ul>
+    </div>
+  </footer>
   </div>
 </body>
 
