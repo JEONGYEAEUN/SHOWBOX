@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SHOWBOX</title>
   <link rel="stylesheet" href="./css/redesign.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="./js/redesign.js"></script>
   <script src="https://kit.fontawesome.com/3f132683be.js" crossorigin="anonymous"></script>
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,10 +29,22 @@
   <!-- ---------------------------- -->
   <link rel="stylesheet" as="style" crossorigin
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css" />
+
+  <!-- -------------------------------- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+
+  <!-- ------------------------------------------------------ -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
-  <span class="btn_top">TOP</span>
+  <span class="btn_top"></span>
   <div class="contents_wrap">
     <header>
       <div class="logoarea">
@@ -230,13 +244,13 @@
               점점 초조해지는데…</p>
           </div> -->
         </section>
-        <section class="station_top5right">
-          <ul class="train_right">
-            <li><img src="./img/1000/top5_1.jpg" alt="태극기 휘날리며 포스터"></li>
-            <li><img src="./img/1000/top5_2.jpg" alt="괴물 포스터"></li>
-            <li><img src="./img/1000/top5_3.jpg" alt="도둑들 포스터"></li>
-            <li><img src="./img/1000/top5_4.jpg" alt="암살 포스터"></li>
-            <li><img src="./img/1000/top5_5.jpg" alt="택시운전사 포스터"></li>
+        <section class="station_top5right swiper">
+          <ul class="train_right swiper-wrapper">
+            <li class="swiper-slide"><img src="./img/1000/top5_1.jpg" alt="태극기 휘날리며 포스터"></li>
+            <li class="swiper-slide"><img src="./img/1000/top5_2.jpg" alt="괴물 포스터"></li>
+            <li class="swiper-slide"><img src="./img/1000/top5_3.jpg" alt="도둑들 포스터"></li>
+            <li class="swiper-slide"><img src="./img/1000/top5_4.jpg" alt="암살 포스터"></li>
+            <li class="swiper-slide"><img src="./img/1000/top5_5.jpg" alt="택시운전사 포스터"></li>
           </ul>
 
           <div class="controler">
@@ -256,21 +270,21 @@
         <section class="nowContents">
           <ul>
             <li>
-              <div class="showboxN_left">
+              <div class="showboxN">
                 <h5>S-ANNOUNCE</h5>
                 <P>공지사항</P>
               </div>
               <span></span>
             </li>
             <li>
-              <div class="showboxN_center">
+              <div class="showboxN">
                 <h5>S-PRESS</h5>
                 <P>언론소식</P>
               </div>
               <span></span>
             </li>
             <li>
-              <div class="showboxN_right">
+              <div class="showboxN">
                 <h5>S-RECRUIT</h5>
                 <P>채용공고</P>
               </div>

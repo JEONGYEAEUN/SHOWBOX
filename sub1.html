@@ -7,24 +7,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SHOWBOX-MOVIE</title>
   <link rel="stylesheet" href="./css/redesign.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="./js/redesign.js"></script>
   <script src="https://kit.fontawesome.com/3f132683be.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- ---------------- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- ------------------- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- ---------------------------- -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable.css" />
+
+  <!-- -------------------------------- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+
+  <!-- ------------------------------------------------------ -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-  <div class="contents_wrap">
-    <span class="btn_top">TOP</span>
-    <header>
-      <div class="logoarea">
+  <div class="sub_contents_wrap">
+    <span class="btn_top"></span>
+    <header class="sub_header">
+      <div class="sub_logoarea">
         <h1>
           <a href="#">
             <img src="./img/SVG/showbox_logo.svg" alt="쇼박스 헤더 화이트 로고">
           </a>
         </h1>
       </div>
-      <div class="innerHeader">
-        <nav class="gnb">
+      <div class="sub_innerHeader">
+        <nav class="sub_gnb">
           <ul>
-            <li><a href="#">ABOUT</a>
+            <li class="on"><a href="#">ABOUT</a>
               <ul>
                 <li><a href="#">(주)쇼박스소개</a></li>
                 <li><a href="#">사업영역</a></li>
@@ -43,14 +74,14 @@
           </ul>
         </nav>
       </div>
-      <nav class="sns">
+      <nav class="sub_sns">
         <ul>
           <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
           <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
           <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
         </ul>
       </nav>
-      <naV class="langList">
+      <naV class="sub_langList">
         <button>
           <span></span>KO<span></span>
         </button>
@@ -64,8 +95,15 @@
       <div class="titleBanner">
         <h1>MOVIE</h1>
       </div>
-      <h5>HOME<span></span>SHOWBOX MOVIE</h5>
+
+
       <div class="now">
+        <div class="category">
+          <ol>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">SHOWBOX MOVIE</a></li>
+          </ol>
+        </div>
         <h2>NOW SHOWING</h2>
         <section class="nPoster">
           <img src="./img/nowshow.jpeg" alt="스즈메의 문단속 포스터">
@@ -79,45 +117,47 @@
         <span></span>
 
       </div>
-      <div class="up">
-        <h2>UP COMING</h2>
-        <ul>
-          <li>
+
+      <h2>UP COMING</h2>
+      <div class="up swiper">
+
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide">
             <figure>
               <img src="./img/upcoming/사흘1.jpg" alt="사흘 포스터">
               <p><a href="#">+자세히 보기</a></p>
             </figure>
             <h3>사흘</h3>
           </li>
-          <li>
+          <li class="swiper-slide">
             <figure>
               <img src="./img/upcoming/시민덕희2.jpg" alt="시민 덕희 포스터">
               <p><a href="#">+자세히 보기</a></p>
             </figure>
             <h3>시민 덕희</h3>
           </li>
-          <li>
+          <li class="swiper-slide">
             <figure>
               <img src="./img/upcoming/휴가3.jpg" alt="휴가 포스터">
               <p><a href="#">+자세히 보기</a></p>
             </figure>
             <h3>휴가</h3>
           </li>
-          <li>
+          <li class="swiper-slide">
             <figure>
               <img src="./img/upcoming/피랍4.jpg" alt="피랍 포스터">
               <p><a href="#">+자세히 보기</a></p>
             </figure>
             <h3>피랍</h3>
           </li>
-          <li>
+          <li class="swiper-slide">
             <figure>
               <img src="./img/upcoming/준비중.jpg" alt="이미지 준비중입니다">
               <p><a href="#">+자세히 보기</a></p>
             </figure>
             <h3>모럴해저드</h3>
           </li>
-          <li>
+          <li class="swiper-slide">
             <figure>
               <img src="./img/upcoming/준비중.jpg" alt="이미지 준비중입니다">
               <p><a href="#">+자세히 보기</a></p>
