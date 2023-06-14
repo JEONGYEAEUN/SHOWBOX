@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="./css/redesign.css">
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="./js/redesign.js"></script>
-  <link rel="stylesheet" href="./css/redesign.css">
+  <!-- 지도 -->
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=2yxj29auna"></script>
   <script src="https://kit.fontawesome.com/3f132683be.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,18 +44,18 @@
 </head>
 
 <body>
-  <div class="contents_wrap">
+  <div class="sub_contents_wrap">
     <span class="btn_top">TOP</span>
-    <header>
-      <div class="logoarea">
+    <header class="sub_header">
+      <div class="sub_logoarea">
         <h1>
           <a href="#">
             <img src="./img/SVG/showbox_logo.svg" alt="쇼박스 헤더 화이트 로고">
           </a>
         </h1>
       </div>
-      <div class="innerHeader">
-        <nav class="gnb">
+      <div class="sub_innerHeader">
+        <nav class="sub_gnb">
           <ul>
             <li><a href="#">ABOUT</a>
               <ul>
@@ -75,14 +76,14 @@
           </ul>
         </nav>
       </div>
-      <nav class="sns">
+      <nav class="sub_sns">
         <ul>
           <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
           <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
           <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
         </ul>
       </nav>
-      <naV class="langList">
+      <naV class="sub_langList">
         <button>
           <span></span>KO<span></span>
         </button>
@@ -101,9 +102,16 @@
         <div class="direction">
           <h2>찾아오시는 길</h2>
           <section class="map">
-            <img src="./img/map.jpg" alt="쇼박스 지도">
-            <!-- <figure>지도 들어갈 예정</figure> -->
+            <div id="map" style="width:1200px;height:740px;"></div>
           </section>
+          <script>
+            var mapOptions = {
+              center: new naver.maps.LatLng(37.5214918, 127.0354608),
+              zoom: 80
+            };
+
+            var map = new naver.maps.Map('map', mapOptions);
+          </script>
           <section class="txt_direction">
             <dl>
               <dt><span></span>주소</dt>
