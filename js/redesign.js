@@ -9,6 +9,13 @@ $(document).ready(function () {
     $("header").removeClass("on")
   });
 
+  $(".nowContents li").mouseover(function () {
+    $(".nowContents li").addClass("on")
+  });
+  $(".nowContents li").mouseout(function () {
+    $(".nowContents li").removeClass("on")
+  });
+
 
   // $(window).scroll(function () {
   //   let winTop = $(window).scrollTop()//스크롤바가 위에서 얼만큼 내려와있는지를 계산
