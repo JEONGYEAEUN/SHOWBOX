@@ -10,10 +10,10 @@ $(document).ready(function () {
   });
 
   $(".nowContents li").mouseover(function () {
-    $(".nowContents li").addClass("on")
+    $(this).addClass("on")
   });
   $(".nowContents li").mouseout(function () {
-    $(".nowContents li").removeClass("on")
+    $(this).removeClass("on")
   });
 
 
@@ -28,15 +28,44 @@ $(document).ready(function () {
   //   }
   // })
 
-  $(window).scroll(function () {
-    let winst = $(window).scrollTop()
-    if (winst > 1) {
-      $("header").addClass("sma")
-    } else {
-      $("header").removeClass("sma")
-    }
+  // $(window).scroll(function () {
+  //   let winst = $(window).scrollTop()
+  //   if (winst > 1) {
+  //     $("header").addClass("sma")
+  //   } else {
+  //     $("header").removeClass("sma")
+  //   }
+  // });
+
+  $(function () {
+    var prevScrollTop = 0;
+
+    document.addEventListener("scroll", function () {
+
+      var nowScrollTop = $(window).scrollTop(); //현재 스크롤 위치를 nowScrollTop 에 저장
+
+      if (nowScrollTop > prevScrollTop) { $('header').addClass('active'); }
+      // 스크롤 방향(Down) 내릴때 -> 헤더에 active 클래스 추가
+      else { $('header').removeClass('active'); } // 스크롤 방향(Up) 올릴때 -> 헤더에 active 클래스 제거
+      prevScrollTop = nowScrollTop;  // prevScroll, nowScrollTop 조건 판단 후, 현재 스크롤값을 prevScrollTop 에 저장
+
+    });
+
   });
 
+  $(window).scroll(function () {
+    //스크롤바가 움직일 때마다 실행되는 소스코드
+    let winTop = $(window).scrollTop()//스크롤바가 위에서 얼만큼 내려와있는지를 계산
+    //윈도우스크롤이 400이상으로 내려가면 header태그의 스타일이 작은 스타일이 되고,
+    //그렇지않다면 기본스타일이 젹용될 수 있도록
+    if (winTop >= 10) {
+      $("header").css("background", "black")
+      $("header img").attr("src", "./img/SVG/showboxColorlogo.svg")
+    } else {
+      $("header").css("background", "transparent")
+      $("header img").attr("src", "./img/SVG/showbox_logo.svg")
+    }
+  })
 
 
   $(".langList").click(function () {
@@ -111,6 +140,8 @@ $(document).ready(function () {
               돈도 없고 빽도 없는 그들은 위험구역으로 선포된<br>
               한강 어딘가에 있을 '현서'를 찾아 나선다.
             </p>
+
+            <a href="#" class="moreview">자세히 보기</a>
           </div>`,
     `<div class="sTop">
             <h4>도둑들</h4>
@@ -128,6 +159,8 @@ $(document).ready(function () {
               달콤한 제안을 거부할 수 없는 이들은 태양의 눈물을 훔치기<br>
               위한 작업에 착수한다. 훔치기 위해 모였지만 목적은 서로<br>
               다른 도둑들은 서서히 자신만의 플랜을 세우기 시작하는데…</p>
+
+              <a href="#" class="moreview">자세히 보기</a>
           </div>`,
     `<div class="sTop">
             <h4>암살</h4>
@@ -143,6 +176,8 @@ $(document).ready(function () {
               '하와이 피스톨'이 암살단의 뒤를 쫓는데...<br>
               친일파 암살작전을 둘러싼 이들의 예측할 수 없는<br>
               운명이 펼쳐진다!</p>
+
+              <a href="#" class="moreview">자세히 보기</a>
           </div>`,
     `<div class="sTop">
             <h4>택시운전사</h4>
@@ -160,6 +195,8 @@ $(document).ready(function () {
               '황기사'의 도움 속에 촬영을 시작한다. 그러나 상황은<br>
               점점 심각해지고 '만섭'은 집에 혼자 있을 딸 걱정에<br>
               점점 초조해지는데…</p>
+
+              <a href="#" class="moreview">자세히 보기</a>
           </div>`
 
   ]
