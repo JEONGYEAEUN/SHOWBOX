@@ -227,5 +227,19 @@ $(document).ready(function () {
     if (count < 0) { count = 5 }
     moveSlider(count)
   })
+
+  // ad 광고배너 스크롤
+
+  $(window).scroll(function () {
+    let startLine = $(window).height() * 0.6
+    let winscroll = $(window).scrollTop()
+    let targetTop = $(".bannFrame").offset().top
+    if (winscroll + startLine >= targetTop && (winscroll + startLine - targetTop) < 200) {
+      console.log(winscroll + startLine - targetTop)
+      let percent = winscroll + startLine - targetTop
+      $(".bannFrame").css("width", (30 + percent) + "%")
+    }
+  })
+
 })
 

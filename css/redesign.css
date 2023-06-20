@@ -490,15 +490,28 @@
 
  /* ---------------------------------------------------------- */
 
+ .bannFrame {
+   position: absolute;
+   left: 50%;
+   top: 0;
+   transform: translateX(-50%);
+   /* border: 1px solid red; */
+   width: 30%;
+   overflow: hidden;
+   transition: all 1s ease 0s;
+ }
+
  .ad {
    position: relative;
    width: 100%;
    height: 480px;
+   background: #1e1b1b;
  }
 
- .ad>img {
+ .bannFrame>img {
    width: 100%;
    height: 480px;
+   object-fit: cover;
  }
 
  .floatingAd {
