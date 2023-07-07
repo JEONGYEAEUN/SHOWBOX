@@ -60,10 +60,10 @@ $(document).ready(function () {
     //그렇지않다면 기본스타일이 젹용될 수 있도록
     if (winTop >= 10) {
       $("header").css("background", "black")
-      $("header img").attr("src", "./img/SVG/showboxColorlogo.svg")
+      $("header img.hLogo").attr("src", "./img/SVG/showboxColorlogo.svg")
     } else {
       $("header").css("background", "transparent")
-      $("header img").attr("src", "./img/SVG/showbox_logo.svg")
+      $("header img.hLogo").attr("src", "./img/SVG/showbox_logo.svg")
     }
   })
 
